@@ -1,0 +1,74 @@
+# ---- Vivado project files / build artifacts ----
+*.jou
+*.log
+*.str
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/sources_1/bd/
+*.gen/
+*.hbs
+.Xil/
+vivado_project/*.xpr
+vivado_project/*.cache/
+vivado_project/*.hw/
+vivado_project/*.ip_user_files/
+vivado_project/*.runs/
+vivado_project/*.sim/
+vivado_project/*.gen/
+vivado_project/.Xil/
+
+# ---- Vivado-generated IP output (regenerable from IP Catalog) ----
+# Keep the .xci (IP config) but ignore the generated output products
+**/ip/*/*.dcp
+**/ip/*/*.vho
+**/ip/*/*.veo
+**/ip/*/synth/
+**/ip/*/sim/
+**/ip/*/simulation/
+**/ip/*/example_design/
+**/ip/*/implementation/
+
+# ---- Synthesis / implementation reports ----
+*.rpt
+*.rpx
+*.bit
+*.ltx
+*.dcp
+*.bin
+*.mmi
+*.debug_probes
+
+# ---- Simulation artifacts (XSim, iverilog, gtkwave) ----
+*.wdb
+*.vcd
+*.jou
+xsim.dir/
+webtalk*.log
+webtalk*.jou
+*.pb
+*.wcfg
+
+# ---- Editor / OS junk ----
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# ---- Python (for img_to_mem.py etc.) ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- Keep these even though patterns above might catch similar names ----
+!constraints/*.xdc
+!scripts/*.tcl
+!scripts/*.py
+!src/**/*.mem
+!src/**/*.hex
