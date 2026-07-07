@@ -1,0 +1,5 @@
+I chose to mix both SystemVerilog and VHDL for three reasons. 
+
+1. At the start of this project I am only comfortable with writing VHDL, and wanted to learn SV.
+2. Through my VHDL coursework I have already created many modules, some of which are used in this project, maybe with some modifications.
+3. I like VHDL a lot for structural design, and from the little Verilog I have written, I find it easier to pick up for behavioral modules

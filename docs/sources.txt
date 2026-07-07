@@ -1,0 +1,1 @@
+VESA VGA Timing Specifications: http://www.microvga.com/vga-timing/640x480@60Hz
