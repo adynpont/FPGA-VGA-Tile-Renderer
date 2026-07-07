@@ -1,0 +1,22 @@
+
+The following block of VHDL was used in the top level in order to test the 
+functionality of the 25.175Mhz clock at the start of the project. 
+
+process (CLK_25)
+begin
+    if rising_edge(CLK_25) then
+        if blink_count >= 12_499_999 then
+            blink_count <= (others => '0');
+            blink_reg <= not blink_reg;
+        else
+            blink_count <= blink_count + 1;
+        end if;
+     end if;
+    end process;
+
+LD0 <= blink_reg;
+
+This makes LED0 on the Basys3 blink once every 12,500,000 clock cycles, roughly once every 0.5 seconds.
+
+The board was programmed with this logic and the 25.175Mhz clock was identified to be working. 
+

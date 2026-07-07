@@ -1,0 +1,325 @@
+
+*** Running vivado
+    with args -log Tile_Generator_TopLevel.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Tile_Generator_TopLevel.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Mon Jul  6 20:33:00 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Tile_Generator_TopLevel.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.srcs/utils_1/imports/synth_1/Tile_Generator_TopLevel.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.srcs/utils_1/imports/synth_1/Tile_Generator_TopLevel.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Tile_Generator_TopLevel -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18896
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1869.047 ; gain = 294.824 ; free physical = 3561 ; free virtual = 17375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Tile_Generator_TopLevel' [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/src/Tile_Generator_TopLevel.vhd:36]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.runs/synth_1/.Xil/Vivado-18844-adyn-MS-7885/realtime/clk_wiz_0_stub.v:6' bound to instance 'clk_25mhz' of component 'clk_wiz_0' [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/src/Tile_Generator_TopLevel.vhd:57]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.runs/synth_1/.Xil/Vivado-18844-adyn-MS-7885/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.runs/synth_1/.Xil/Vivado-18844-adyn-MS-7885/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'Tile_Generator_TopLevel' (0#1) [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/src/Tile_Generator_TopLevel.vhd:36]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1939.984 ; gain = 365.762 ; free physical = 3432 ; free virtual = 17247
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1957.797 ; gain = 383.574 ; free physical = 3429 ; free virtual = 17244
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1957.797 ; gain = 383.574 ; free physical = 3429 ; free virtual = 17244
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1957.797 ; gain = 0.000 ; free physical = 3428 ; free virtual = 17243
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_25mhz'
+Finished Parsing XDC File [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_25mhz'
+Parsing XDC File [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW0'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'SW0'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:8]
+WARNING: [Vivado 12-584] No ports matched 'SW1'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'SW1'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[4]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[4]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[5]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[5]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[6]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[6]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[7]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[7]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[8]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[8]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[9]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[9]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[10]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[10]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[11]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[11]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[12]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[12]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[13]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[13]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[14]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[14]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[15]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'SWITCH[15]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[0]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[0]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[1]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[1]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:80]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[4]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[4]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[5]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[5]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[6]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'SEGMENT[6]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[0]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:95]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[0]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[1]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[1]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:99]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[2]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:101]
+WARNING: [Vivado 12-584] No ports matched 'ANODE[3]'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'BTND'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'BTND'. [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc:115]
+Finished Parsing XDC File [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Tile_Generator_TopLevel_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/constraints/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Tile_Generator_TopLevel_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Tile_Generator_TopLevel_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2057.535 ; gain = 0.000 ; free physical = 3396 ; free virtual = 17211
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2057.535 ; gain = 0.000 ; free physical = 3396 ; free virtual = 17211
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2057.535 ; gain = 483.312 ; free physical = 3429 ; free virtual = 17244
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2065.539 ; gain = 491.316 ; free physical = 3429 ; free virtual = 17244
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK. (constraint file  /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK. (constraint file  /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_25mhz. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2065.539 ; gain = 491.316 ; free physical = 3429 ; free virtual = 17244
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2065.539 ; gain = 491.316 ; free physical = 3435 ; free virtual = 17251
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2065.539 ; gain = 491.316 ; free physical = 3438 ; free virtual = 17258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2096.539 ; gain = 522.316 ; free physical = 3388 ; free virtual = 17208
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2116.570 ; gain = 542.348 ; free physical = 3365 ; free virtual = 17185
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2117.578 ; gain = 543.355 ; free physical = 3365 ; free virtual = 17185
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.391 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.391 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.391 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.391 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.391 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.391 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |CARRY4  |     6|
+|3     |LUT1    |     1|
+|4     |LUT4    |     3|
+|5     |LUT5    |     2|
+|6     |LUT6    |     2|
+|7     |FDRE    |    25|
+|8     |IBUF    |     1|
+|9     |OBUF    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.391 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2278.391 ; gain = 604.430 ; free physical = 3235 ; free virtual = 17055
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2278.398 ; gain = 704.168 ; free physical = 3235 ; free virtual = 17055
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.398 ; gain = 0.000 ; free physical = 3235 ; free virtual = 17055
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.398 ; gain = 0.000 ; free physical = 3401 ; free virtual = 17221
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 71b8695f
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 94 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 2278.398 ; gain = 808.227 ; free physical = 3401 ; free virtual = 17221
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1537.996; main = 1499.790; forked = 268.590
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3000.551; main = 2278.395; forked = 917.008
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2302.402 ; gain = 0.000 ; free physical = 3401 ; free virtual = 17221
+INFO: [Common 17-1381] The checkpoint '/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.runs/synth_1/Tile_Generator_TopLevel.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Tile_Generator_TopLevel_utilization_synth.rpt -pb Tile_Generator_TopLevel_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  6 20:33:34 2026...

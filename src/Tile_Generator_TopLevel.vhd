@@ -21,12 +21,14 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 
 entity Tile_Generator_TopLevel is
 port (
         CLK   : in  STD_LOGIC;
-        RESET : in  STD_LOGIC
+        RESET : in  STD_LOGIC;
+        
         
     );
 end Tile_Generator_TopLevel;
@@ -35,6 +37,8 @@ architecture Structural of Tile_Generator_TopLevel is
 
 signal CLK_25: STD_LOGIC;
 signal clk_locked : STD_LOGIC;
+signal blink_count : UNSIGNED(23 downto 0) := (others => '0');
+signal blink_reg    : STD_LOGIC := '0';
 
 component clk_wiz_0
     port (
@@ -57,5 +61,8 @@ clk_25mhz : clk_wiz_0
        reset => RESET,
        locked => clk_locked 
    );
-       
+   
+   
+
+
 end Structural;
