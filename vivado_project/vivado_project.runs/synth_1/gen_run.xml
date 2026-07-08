@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1783384376" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Tile_Generator_TopLevel.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="Tile_Generator_TopLevel_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Tile_Generator_TopLevel.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Tile_Generator_TopLevel_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Tile_Generator_TopLevel_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Tile_Generator_TopLevel_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Tile_Generator_TopLevel.vds"/>
   <File Type="REPORTS-TCL" Name="Tile_Generator_TopLevel_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="Tile_Generator_TopLevel_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="Tile_Generator_TopLevel.tcl"/>
+  <File Type="RDS-UTIL" Name="Tile_Generator_TopLevel_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Tile_Generator_TopLevel_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../src/Tile_Generator_TopLevel.vhd">
@@ -84,9 +81,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>

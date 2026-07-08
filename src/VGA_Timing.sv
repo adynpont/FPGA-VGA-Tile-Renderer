@@ -45,4 +45,28 @@ module VGA_Timing(
     localparam int V_SYNC = 2;
     localparam int V_BACK = 33;
     localparam int V_TOTAL = V_VISIBLE + V_FRONT + V_SYNC + V_BACK;
+    
+    logic [9:0] h_count, v_count;
+    
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin 
+            h_count <= 0;
+            v_count <= 0;
+        end else begin 
+            if (h_count == H_TOTAL - 1) begin 
+             h_count <= 0; 
+             if (v_count == V_TOTAL -1) 
+                v_count <= 0;
+            else 
+                v_count <= v_count + 1;
+            end else begin 
+           h_count <= h_count + 1;
+           end 
+          end
+        end 
+   
+    assign h_sync = ~((h_count >= (H_VISIBLE + H_FRONT)) && (h_count < (H_VISIBLE + H_FRONT + H_SYNC)));
+    assign v_sync = ~((v_count >= (V_VISIBLE + V_FRONT)) && (v_count < (V_VISIBLE + V_FRONT + V_SYNC)));
+    
+    
 endmodule

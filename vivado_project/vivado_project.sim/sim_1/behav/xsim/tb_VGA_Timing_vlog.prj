@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../vivado_project.ip_user_files/ipstatic" \
+"../../../../../src/VGA_Timing.sv" \
+"../../../../../sim/tb_VGA_Timing.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

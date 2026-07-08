@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/src/VGA_Timing.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VGA_Timing
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/sim/tb_VGA_Timing.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_VGA_Timing
