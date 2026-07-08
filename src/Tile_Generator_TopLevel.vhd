@@ -28,6 +28,11 @@ entity Tile_Generator_TopLevel is
 port (
         CLK   : in  STD_LOGIC;
         RESET : in  STD_LOGIC;
+        vgaRed : out STD_LOGIC_VECTOR(3 downto 0);
+        vgaGreen : out STD_LOGIC_VECTOR(3 downto 0);
+        vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
+        Hsync : out STD_LOGIC;
+        Vsync : out STD_LOGIC
         
         
     );

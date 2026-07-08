@@ -1,0 +1,3 @@
+The testbench for the VGA Timing module was the first testbench I have written. The module passed 2-frame verification first try. Initially, the simulation
+did not run all the way and it left me confused. I had to type "run all" in the
+TCL console to run the complete simulation, as it defaulted to just 1000ns
