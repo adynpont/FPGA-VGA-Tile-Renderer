@@ -57,7 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
-set_param project.hsv.suppressChildGraphs 0
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -74,6 +74,12 @@ set_property ip_output_repo /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/v
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_verilog -library xil_defaultlib -sv {
+  /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.srcs/sources_1/new/hcounter.sv
+  /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.srcs/sources_1/new/imagegen.sv
+  /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.srcs/sources_1/new/syncgen.sv
+  /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.srcs/sources_1/new/vcounter.sv
+}
 read_vhdl -library xil_defaultlib /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/src/Tile_Generator_TopLevel.vhd
 read_ip -quiet /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all /home/adyn/Documents/GitHub/FPGA-VGA-Tile-Renderer/vivado_project/vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]

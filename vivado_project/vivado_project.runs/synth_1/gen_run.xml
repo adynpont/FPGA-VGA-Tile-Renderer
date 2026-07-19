@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1783384376" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Tile_Generator_TopLevel.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1784499154" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Tile_Generator_TopLevel.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="Tile_Generator_TopLevel_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Tile_Generator_TopLevel.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Tile_Generator_TopLevel_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Tile_Generator_TopLevel_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Tile_Generator_TopLevel_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Tile_Generator_TopLevel.vds"/>
   <File Type="REPORTS-TCL" Name="Tile_Generator_TopLevel_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="Tile_Generator_TopLevel_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="Tile_Generator_TopLevel.tcl"/>
-  <File Type="RDS-UTIL" Name="Tile_Generator_TopLevel_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Tile_Generator_TopLevel_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/hcounter.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/imagegen.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/syncgen.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vcounter.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../src/Tile_Generator_TopLevel.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -46,6 +77,14 @@
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/videosignal_gen.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

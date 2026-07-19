@@ -65,8 +65,8 @@ module VGA_Timing(
           end
         end 
    
-    assign h_sync = ~((h_count >= (H_VISIBLE + H_FRONT)) && (h_count < (H_VISIBLE + H_FRONT + H_SYNC)));
-    assign v_sync = ~((v_count >= (V_VISIBLE + V_FRONT)) && (v_count < (V_VISIBLE + V_FRONT + V_SYNC)));
-    
-    
+    assign hsync = ~((h_count >= (H_VISIBLE + H_FRONT)) && (h_count < (H_VISIBLE + H_FRONT + H_SYNC)));
+    assign vsync = ~((v_count >= (V_VISIBLE + V_FRONT)) && (v_count < (V_VISIBLE + V_FRONT + V_SYNC)));
+    assign video_active = (h_count < H_VISIBLE) && (v_count < V_VISIBLE);
+   
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Mon Jul  6 20:34:24 2026
+| Date             : Sun Jul 19 18:14:01 2026
 | Host             : adyn-MS-7885 running 64-bit Ubuntu 24.04.4 LTS
 | Command          : report_power -file Tile_Generator_TopLevel_power_routed.rpt -pb Tile_Generator_TopLevel_power_summary_routed.pb -rpx Tile_Generator_TopLevel_power_routed.rpx
 | Design           : Tile_Generator_TopLevel
@@ -53,14 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |       43 |       --- |             --- |
-|   LUT as Logic |    <0.001 |        8 |     20800 |            0.04 |
-|   CARRY4       |    <0.001 |        6 |      8150 |            0.07 |
-|   Register     |    <0.001 |       25 |     41600 |            0.06 |
+| Slice Logic    |    <0.001 |       58 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       26 |     20800 |            0.13 |
+|   Register     |    <0.001 |       20 |     41600 |            0.05 |
 |   Others       |     0.000 |        4 |       --- |             --- |
 | Signals        |    <0.001 |       37 |       --- |             --- |
 | MMCM           |     0.115 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |        3 |       106 |            2.83 |
+| I/O            |    <0.001 |       16 |       106 |           15.09 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.188 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -125,16 +124,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+----------------------+-----------------------------------+-----------------+
-| Clock                | Domain                            | Constraint (ns) |
-+----------------------+-----------------------------------+-----------------+
-| CLK                  | CLK                               |            10.0 |
-| clk_out1_clk_wiz_0   | clk_25mhz/inst/clk_out1_clk_wiz_0 |            39.7 |
-| clk_out1_clk_wiz_0_1 | clk_25mhz/inst/clk_out1_clk_wiz_0 |            39.7 |
-| clkfbout_clk_wiz_0   | clk_25mhz/inst/clkfbout_clk_wiz_0 |            40.0 |
-| clkfbout_clk_wiz_0_1 | clk_25mhz/inst/clkfbout_clk_wiz_0 |            40.0 |
-| sys_clk_pin          | CLK                               |            10.0 |
-+----------------------+-----------------------------------+-----------------+
++----------------------+-------------------------------------+-----------------+
+| Clock                | Domain                              | Constraint (ns) |
++----------------------+-------------------------------------+-----------------+
+| CLK                  | CLK                                 |            10.0 |
+| clk_out1_clk_wiz_0   | clk_25_inst/inst/clk_out1_clk_wiz_0 |            39.7 |
+| clk_out1_clk_wiz_0_1 | clk_25_inst/inst/clk_out1_clk_wiz_0 |            39.7 |
+| clkfbout_clk_wiz_0   | clk_25_inst/inst/clkfbout_clk_wiz_0 |            40.0 |
+| clkfbout_clk_wiz_0_1 | clk_25_inst/inst/clkfbout_clk_wiz_0 |            40.0 |
+| sys_clk_pin          | CLK                                 |            10.0 |
++----------------------+-------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -147,7 +146,7 @@ Table of Contents
 | Name                    | Power (W) |
 +-------------------------+-----------+
 | Tile_Generator_TopLevel |     0.116 |
-|   clk_25mhz             |     0.115 |
+|   clk_25_inst           |     0.115 |
 |     inst                |     0.115 |
 +-------------------------+-----------+
 

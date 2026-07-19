@@ -1,0 +1,7 @@
+Running: xsim.dir/Tile_Generator_TopLevel_behav/xsimk -simmode gui -wdb Tile_Generator_TopLevel_behav.wdb -simrunnum 0 -socket 57343
+Design successfully loaded
+Design Loading Memory Usage: 181372 KB (Peak: 181380 KB)
+Design Loading CPU Usage: 1410 ms
+Simulation completed
+Simulation Memory Usage: 267728 KB (Peak: 320640 KB)
+Simulation CPU Usage: 1470 ms

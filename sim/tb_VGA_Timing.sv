@@ -65,6 +65,8 @@ module tb_VGA_Timing;
     reset = 0; 
     
     repeat (2 * H_TOTAL * V_TOTAL + 100) @(posedge clk) begin
+    
+        #1;
         check_outputs();
         update_expected();
         cycle_count++;

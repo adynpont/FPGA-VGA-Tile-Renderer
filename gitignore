@@ -20,6 +20,7 @@ vivado_project/*.runs/
 vivado_project/*.sim/
 vivado_project/*.gen/
 vivado_project/.Xil/
+vivado_project/vivado_project.sim/sim_1/behav/xsim/simulate.log
 
 # ---- Vivado-generated IP output (regenerable from IP Catalog) ----
 # Keep the .xci (IP config) but ignore the generated output products
