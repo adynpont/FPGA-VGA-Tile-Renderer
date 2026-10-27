@@ -25,7 +25,8 @@ module vcounter(
     input logic clk_25,
     input logic En,
     input logic reset,
-    output logic [9:0] Vcnt
+    output logic [9:0] Vcnt,
+    output logic TC
 
     );
   
@@ -49,6 +50,7 @@ module vcounter(
         end
     end
 
+assign TC = En && (Vcnt == V_TOTAL - 1);
 
-  
+
 endmodule

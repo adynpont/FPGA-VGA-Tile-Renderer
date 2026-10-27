@@ -24,7 +24,10 @@ end entity;
 
 architecture Behavioral of PulseGenerator_10ms is
 
-    signal count : UNSIGNED(16 downto 0) := (OTHERS => '0');
+    -- 20 bits: needs to actually reach 999999 (requires >=20 bits), not the
+    -- 17 bits this was previously declared with (max 131071, wraps long
+    -- before the comparison below can ever be true -> PULSE never fired).
+    signal count : UNSIGNED(19 downto 0) := (OTHERS => '0');
 
 begin
 

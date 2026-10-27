@@ -1,47 +1,32 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 07/19/2026 05:57:15 PM
-// Design Name: 
-// Module Name: imagegen
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
-
+// Final compositor: sprite drawn over tile background, black during blanking.
+// video_active here is the 2-cycle-delayed signal from tile_fetch, already
+// aligned with bg_color/sprite_color's pipeline latency.
 module imagegen(
-    
-    
-    input logic video_active,
-    output logic [3:0]  vgaRed,
-    output logic [3:0] vgaBlue,
-    output logic [3:0] vgaGreen
+
+    input logic        video_active,
+    input logic [11:0] bg_color,
+    input logic [11:0] sprite_color,
+    input logic        sprite_active,
+    output logic [3:0] vgaRed,
+    output logic [3:0] vgaGreen,
+    output logic [3:0] vgaBlue
    );
-   
-   
-   
- always_comb begin
-    if (video_active) begin
-       vgaRed = 4'hF;
-       vgaBlue = 4'h0;
-       vgaGreen = 4'h0;
-    end else begin
-        vgaRed = 4'h0;
-        vgaBlue = 4'h0;
-        vgaGreen = 4'h0;
+
+    logic [11:0] pixel_color;
+
+    always_comb begin
+        if (!video_active)
+            pixel_color = 12'h000;
+        else if (sprite_active)
+            pixel_color = sprite_color;
+        else
+            pixel_color = bg_color;
     end
- end
- 
- 
+
+    assign vgaRed   = pixel_color[11:8];
+    assign vgaGreen = pixel_color[7:4];
+    assign vgaBlue  = pixel_color[3:0];
+
 endmodule
